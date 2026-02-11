@@ -1,8 +1,10 @@
 import express from "express";
-import {register } from "../controllers/usercontrollers.js";
+import {register, verify, reVerify } from "../controllers/usercontrollers.js";
 
 const router = express.Router();
 
 router.post("/register", register);
+router.post("/verify", verify);
+router.post("/reVerify", reVerify);
 
 export default router;
